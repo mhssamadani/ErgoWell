@@ -1,0 +1,20 @@
+{
+  "name": "ergo-well",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "vite-node index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@git.ergopool.io:ergo/profit-sharing/ergo-locking-profit.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.7.1",
+    "vite": "^3.1.7",
+    "vite-node": "^0.24.1"
+  }
+}
