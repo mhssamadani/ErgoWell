@@ -120,9 +120,9 @@ This box is used to provide and redeem licenses. It also contains some data abou
 
 | Register | Type         | Content                |
 | -------- | ------------ | ---------------------- |
-| R4(0)    | `Coll[Byte]` | `serviceAddress`       |
+| R4       | `Coll[Byte]` | `serviceAddress`       |
 |          |              |                        |
-| R5(0)    | `Int`        | `serviceFee` (percent) |
+| R5       | `Int`        | `serviceFee` (percent) |
 
 ### TokenlessPendingProject
 
@@ -135,9 +135,9 @@ This is a temporary box which will be merged with StakoinBank.
 | Register | Type         | Content                          |
 | -------- | ------------ | -------------------------------- |
 | R4(0)    | `Coll[Byte]` | `koinTokenId`                    |
-| R4(0)    | `Coll[Byte]` | `stakoinTokenId`                 |
-| R4(1)    | `Coll[Byte]` | `ventureAddress`                 |
-| R4(2)    | `Coll[Byte]` | `serviceAddress`                 |
+| R4(1)    | `Coll[Byte]` | `stakoinTokenId`                 |
+| R4(2)    | `Coll[Byte]` | `ventureAddress`                 |
+| R4(3)    | `Coll[Byte]` | `serviceAddress`                 |
 |          |              |                                  |
 | R5(0)    | `Int`        | `fundingDeadline` (height)       |
 | R5(1)    | `Int`        | `distributionInterval` (blocks)  |
@@ -160,7 +160,7 @@ This is a temporary box which will be merged with TokenlessPendingProject.
 
 | Register | Type         | Content        |
 | -------- | ------------ | -------------- |
-| R4(0)    | `Coll[Byte]` | `licenseNFTId` |
+| R4       | `Coll[Byte]` | `licenseNFTId` |
 
 ### Collateral
 
