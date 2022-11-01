@@ -456,6 +456,8 @@ graph LR;
   Tx --> CollateralPayment;
 ```
 
+Please note that ProfitableProject is used as data input in this transaction.
+
 ### Collateral unlocking (in case of a failed venture)
 
 ```mermaid
@@ -464,6 +466,8 @@ graph LR;
   ProfitableProject>ProfitableProject] --> Tx;
   Tx --> ServicePayment;
 ```
+
+Please note that ProfitableProject is used as data input in this transaction.
 
 As you can see, in case of a failed venture, the collateral is sent to ErgeWell service address and then distributed by ErgoWell manually.
 
