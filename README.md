@@ -57,7 +57,7 @@ graph LR;
 1. You first need to find some ventures that attracts your attention. You probably need to read their whitepaper and see if they have the potential for making any profit, if they provide acceptable interest, and if they provide any collateral to reduce your risk.
 2. Once you find a good venture, you need to invest your money in it and wait to see if it gets funded before the deadline. If it's not, you will get back your money.
 3. If the project is funded, you may receive some interest in regular periods (each month, for example).
-4. While the venture is active, you may notice that it is not what it meant to be. It may underperform, for example, or you may just lose your interest in the venture for no reason. No matter the reason, you may decide not to risk on it anymore. As a result, you may want to get part or all of your money back. Please consider that in some ventures, you can only unstake your money in special periods of venture lifetime (in the first 3 months, for example). In addition, you may be asked to pay some penalty for unstaking. Another thing to spot is that, you probably cannot unstake all your money in most of the projects, based on the venture risk. If the risk is 30%, for example, then you only can unstake 70% of your investments and the other 30% are locked until the end of project lifetime. You need to select your venture carefully based on all these metrics in the first step.
+4. While the venture is active, you may notice that it is not what it meant to be. It may underperform, for example, or you may just lose your interest in the venture for no reason. No matter the reason, you may decide not to risk on it anymore. As a result, you may want to get part or all of your money back. Please consider that in some ventures, you can only unstake your money in special periods of venture lifetime (in the first 3 months, for example). In later versions, you may be asked to pay some penalty for unstaking too. Another thing to spot is that, you probably cannot unstake all your money in most of the projects, based on the venture risk. If the risk is 30%, for example, then you only can unstake 70% of your investments and the other 30% are locked until the end of project lifetime. You need to select your venture carefully based on all these metrics in the first step.
 5. At the end of venture lifetime, two things may happen: Either the venture is successful, returning all the risked money of investors and some probable additional rewards. In this case, you get all your money back and a portion of the additional rewards based on how much you invested in the venture.
 6. If, on the other hand, the project is not successful, you will get all your money that is not part of the risk. The risked portion, however, is not available anymore and you have lost it. The venture, however, may provide some collateral to be given to investors, compensating part of your loss. It even may be so valuable that be larger than your risked money.
 
@@ -144,10 +144,9 @@ This is a temporary box which will be merged with StakoinBank.
 | R5(2)    | `Int`        | `lifetime` (blocks)              |
 | R5(3)    | `Int`        | `risk` (percent)                 |
 | R5(4)    | `Int`        | `serviceFee`                     |
-| R5(5)    | `Int`        | `unstakingPenalty` (percent)     |
-| R5(6)    | `Int`        | `profitFillingDeadline` (height) |
-| R5(7)    | `Int`        | `allowedUnstakingMinHeight`      |
-| R5(8)    | `Int`        | `allowedUnstakingMaxHeight`      |
+| R5(5)    | `Int`        | `profitFillingDeadline` (height) |
+| R5(6)    | `Int`        | `allowedUnstakingMinHeight`      |
+| R5(7)    | `Int`        | `allowedUnstakingMaxHeight`      |
 |          |              |                                  |
 | R6       | `Long`       | `hitThreshold` (in Stakoins)     |
 
@@ -191,10 +190,9 @@ This is a box containing all the funds before the project deadline. It may or ma
 | R5(2)    | `Int`        | `lifetime`                  |
 | R5(3)    | `Int`        | `risk`                      |
 | R5(4)    | `Int`        | `serviceFee`                |
-| R5(5)    | `Int`        | `unstakingPenalty`          |
-| R5(6)    | `Int`        | `profitFillingDeadline`     |
-| R5(7)    | `Int`        | `allowedUnstakingMinHeight` |
-| R5(8)    | `Int`        | `allowedUnstakingMaxHeight` |
+| R5(5)    | `Int`        | `profitFillingDeadline`     |
+| R5(6)    | `Int`        | `allowedUnstakingMinHeight` |
+| R5(7)    | `Int`        | `allowedUnstakingMaxHeight` |
 |          |              |                             |
 | R6(0)    | `Long`       | `lockedKoinsCount`          |
 | R6(1)    | `Long`       | `hitThreshold`              |
@@ -217,10 +215,9 @@ If a PendingProject is funded, this box gets created with most of the contents o
 | R5(1)    | `Int`        | `lifetime`                  |
 | R5(2)    | `Int`        | `risk`                      |
 | R5(3)    | `Int`        | `lastPaymentPeriodNumber`   |
-| R5(4)    | `Int`        | `unstakingPenalty`          |
-| R5(5)    | `Int`        | `profitFillingDeadline`     |
-| R5(6)    | `Int`        | `allowedUnstakingMinHeight` |
-| R5(7)    | `Int`        | `allowedUnstakingMaxHeight` |
+| R5(4)    | `Int`        | `profitFillingDeadline`     |
+| R5(5)    | `Int`        | `allowedUnstakingMinHeight` |
+| R5(6)    | `Int`        | `allowedUnstakingMaxHeight` |
 |          |              |                             |
 | R6(0)    | `Long`       | `hitThreshold`              |
 | R6(1)    | `Long`       | `lockedKoinsCount`          |
@@ -511,3 +508,8 @@ The fees of the transactions are either payed by venture or investors. The follo
 | Project redeeming               | Venture  |
 
 Venture fees are saved and flowed through TokenlessPendingProject, PendingProject, FundedProject and ProfitProject boxes. Investors fees are saved in Ticket box and can be charged if needed.
+
+## TODO
+
+- [ ] Provide multiple types of tokens as interest
+- [ ] Add the option to receive some penalty for unstaking
